@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LRS Elétrica — Instalações, Manutenção e Materiais Elétricos</title>
+<meta name="description" content="LRS Elétrica: instalação, distribuição, manutenção e materiais elétricos com excelência e segurança. Atendimento residencial e comercial via WhatsApp.">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#inicio" class="brand" aria-label="LRS Elétrica — início">
+      <img src="assets/logo.png" alt="LRS Elétrica" class="brand__logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <span class="brand__fallback">
+        <span class="brand__fallback-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"/></svg>
+        </span>
+        <span class="brand__name">LRS <strong>ELÉTRICA</strong></span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <ul class="nav__list">
+        <li><a href="#inicio" class="nav__link active" data-nav>Início</a></li>
+        <li><a href="#sobre" class="nav__link" data-nav>Sobre</a></li>
+        <li><a href="#servicos" class="nav__link" data-nav>Serviços</a></li>
+        <li><a href="#galeria" class="nav__link" data-nav>Galeria</a></li>
+        <li><a href="#faq" class="nav__link" data-nav>FAQ</a></li>
+        <li><a href="#contato" class="nav__link" data-nav>Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="btn btn--primary btn--sm" id="openContactPanel" type="button">Fale Conosco</button>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Overlay for mobile menu + contact panel -->
+<div class="overlay" id="overlay"></div>
+
+<!-- ===== CONTACT SLIDE PANEL ===== -->
+<aside class="contact-panel" id="contactPanel" aria-hidden="true">
+  <div class="contact-panel__header">
+    <h3>Solicitar orçamento</h3>
+    <button class="contact-panel__close" id="closeContactPanel" aria-label="Fechar">&times;</button>
+  </div>
+
+  <form class="contact-form" id="contactForm" novalidate>
+    <p class="contact-form__hint">Preencha os dados abaixo. Ao enviar, vamos abrir o WhatsApp com sua mensagem pronta.</p>
+
+    <div class="field">
+      <label for="cf-nome">Nome</label>
+      <input type="text" id="cf-nome" name="nome" placeholder="Seu nome completo" required>
+      <span class="field__error">Informe seu nome.</span>
+    </div>
+
+    <div class="field">
+      <label for="cf-email">E-mail</label>
+      <input type="email" id="cf-email" name="email" placeholder="seuemail@exemplo.com" required>
+      <span class="field__error">Informe um e-mail válido.</span>
+    </div>
+
+    <div class="field">
+      <label for="cf-telefone">Telefone / WhatsApp</label>
+      <input type="tel" id="cf-telefone" name="telefone" placeholder="(33) 9 9999-9999" required>
+      <span class="field__error">Informe um telefone válido.</span>
+    </div>
+
+    <div class="field">
+      <label for="cf-mensagem">Mensagem</label>
+      <textarea id="cf-mensagem" name="mensagem" rows="4" placeholder="Conte rapidamente o que você precisa..." required></textarea>
+      <span class="field__error">Escreva uma mensagem.</span>
+    </div>
+
+    <button type="submit" class="btn btn--primary btn--block">
+      <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M16 .3C7.4.3.4 7.2.4 15.8c0 2.7.7 5.3 2.1 7.7L.3 31.7l8.4-2.2c2.3 1.3 4.9 1.9 7.6 1.9 8.6 0 15.6-6.9 15.6-15.5C31.9 7.2 24.9.3 16 .3zm0 28.4c-2.4 0-4.7-.6-6.8-1.9l-.5-.3-5 1.3 1.3-4.8-.3-.5c-1.4-2.2-2.1-4.7-2.1-7.3 0-7.1 5.8-12.9 13.4-12.9 3.6 0 6.9 1.4 9.5 3.9 2.5 2.5 4 5.9 4 9.4-.1 7.2-5.9 13.1-13.5 13.1zm7.3-9.7c-.4-.2-2.4-1.2-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.2-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.6.1-.3 0-.5 0-.7-.1-.2-.9-2.2-1.3-3-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.8 4.2 6.7 5.9.9.4 1.7.6 2.3.8.9.3 1.8.3 2.4.2.7-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.2-.3-.3-.7-.5z"/></svg>
+      Enviar via WhatsApp
+    </button>
+  </form>
+</aside>
+
+<main>
+
+  <!-- ===== HERO / CARROSSEL ===== -->
+  <section class="hero" id="inicio">
+    <div class="carousel" id="heroCarousel" data-autoplay="10000">
+      <div class="carousel__track">
+
+        <article class="slide is-active" data-slide>
+          <div class="slide__bg slide__bg--1"></div>
+          <div class="container slide__content">
+            <div class="slide__text">
+              <span class="tag">LRS Elétrica</span>
+              <h1>Excelência que <span class="text-accent">dá energia</span></h1>
+              <p>Instalação, manutenção e distribuição elétrica com segurança, agilidade e mão de obra qualificada — pra sua casa ou seu negócio nunca ficar no escuro.</p>
+              <div class="slide__cta">
+                <a href="https://wa.me/5533984217848?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20ou%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn btn--primary">Chamar no WhatsApp</a>
+                <a href="#servicos" class="btn btn--ghost">Ver serviços</a>
+              </div>
+            </div>
+            <div class="slide__mascot" id="mascot1">
+              <img src="assets/mascote.png" alt="Eletricista mascote LRS Elétrica" class="mascot__img" onerror="this.style.display='none'; this.parentElement.classList.add('mascot--fallback')">
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-slide>
+          <div class="slide__bg slide__bg--2"></div>
+          <div class="container slide__content">
+            <div class="slide__text">
+              <span class="tag">Instalação &amp; Reparo</span>
+              <h1>Curto-circuito? <span class="text-accent">A gente resolve.</span></h1>
+              <p>Diagnóstico rápido e instalação elétrica residencial e comercial dentro das normas técnicas, com segurança em primeiro lugar.</p>
+              <div class="slide__cta">
+                <a href="https://wa.me/5533984217848?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20ou%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn btn--primary">Falar com um eletricista</a>
+                <a href="#sobre" class="btn btn--ghost">Conhecer a empresa</a>
+              </div>
+            </div>
+            <div class="slide__mascot mascot--fallback" id="mascot2"></div>
+          </div>
+        </article>
+
+        <article class="slide" data-slide>
+          <div class="slide__bg slide__bg--3"></div>
+          <div class="container slide__content">
+            <div class="slide__text">
+              <span class="tag">Materiais &amp; Distribuição</span>
+              <h1>Tudo em <span class="text-accent">material elétrico</span></h1>
+              <p>Fornecemos e instalamos materiais elétricos de qualidade, com distribuição eficiente para obras, reformas e manutenções.</p>
+              <div class="slide__cta">
+                <a href="https://wa.me/5533984217848?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20ou%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn btn--primary">Pedir orçamento</a>
+                <a href="#contato" class="btn btn--ghost">Área de atendimento</a>
+              </div>
+            </div>
+            <div class="slide__mascot mascot--fallback" id="mascot3"></div>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="carousel__arrow carousel__arrow--prev" data-prev aria-label="Slide anterior">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+      </button>
+      <button class="carousel__arrow carousel__arrow--next" data-next aria-label="Próximo slide">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4L13.2 12z"/></svg>
+      </button>
+
+      <div class="carousel__dots" data-dots></div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Quem somos</span>
+        <h2>Nossa <span class="text-accent">história</span></h2>
+      </div>
+
+      <div class="history-block">
+        <p>A <strong>LRS Elétrica</strong> nasceu com o propósito de oferecer soluções elétricas com qualidade, segurança e confiança.</p>
+        <p>Ao longo da nossa trajetória, construímos nosso trabalho com base no compromisso com cada cliente, buscando sempre realizar nossos serviços com responsabilidade, atenção aos detalhes e respeito às normas de segurança.</p>
+        <p>Hoje, seguimos evoluindo para entregar soluções elétricas eficientes e confiáveis, sempre colocando a satisfação de nossos clientes em primeiro lugar.</p>
+        <p class="history-tagline"><strong>LRS Elétrica</strong> — energia, segurança e qualidade em cada serviço.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section class="section section--alt" id="servicos">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">O que fazemos</span>
+        <h2>Nossos <span class="text-accent">serviços</span></h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"/></svg>
+          </div>
+          <h3>Curto-circuito</h3>
+          <p>Diagnóstico e reparo rápido de curtos-circuitos com segurança.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M6 2h2v3H6zm10 0h2v3h-2zM4 6h16a1 1 0 0 1 1 1v3a5 5 0 0 1-4.1 4.92A5 5 0 0 1 13 18.9V21h3v2H8v-2h3v-2.1a5 5 0 0 1-3.9-4.98A5 5 0 0 1 3 10V7a1 1 0 0 1 1-1z"/></svg>
+          </div>
+          <h3>Instalação Elétrica</h3>
+          <p>Instalações residenciais e comerciais dentro das normas técnicas.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M4 3h16v2H4zm2 4h12v2H6zm-2 4h16v2H4zm2 4h12v2H6zm-2 4h16v2H4z"/></svg>
+          </div>
+          <h3>Distribuição</h3>
+          <p>Distribuição de energia planejada para obras e reformas.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2 2 7v10l10 5 10-5V7L12 2zm0 2.24L18.5 7 12 10.24 5.5 7 12 4.24zM4 9.3l7 3.5v7.87l-7-3.5V9.3zm9 11.37v-7.87l7-3.5v7.87l-7 3.5z"/></svg>
+          </div>
+          <h3>Materiais Elétricos</h3>
+          <p>Fornecimento de materiais elétricos de qualidade para seu projeto.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2 2 7v6c0 5 4 9 10 9s10-4 10-9V7l-10-5zm0 2.2 8 4V13c0 4-3.5 7-8 7s-8-3-8-7V8.2l8-4z"/></svg>
+          </div>
+          <h3>Elétrica em Geral</h3>
+          <p>Manutenção preventiva e corretiva completa para sua rede elétrica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIA ===== -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Trabalhos realizados</span>
+        <h2>Nossa <span class="text-accent">galeria</span></h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/services/curto-circuito.jpg" alt="Reparo de curto-circuito realizado pela LRS Elétrica" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/services/instalacao.jpg" alt="Instalação elétrica residencial realizada pela LRS Elétrica" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/services/materiais.jpg" alt="Materiais e componentes elétricos instalados pela LRS Elétrica" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/services/distribuicao.jpg" alt="Viatura da LRS Elétrica em campo" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section--alt" id="faq">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Dúvidas frequentes</span>
+        <h2>Perguntas <span class="text-accent">frequentes</span></h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>O orçamento é gratuito?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer__inner">
+              <p>Sim! Fazemos a avaliação e o orçamento sem nenhum custo e sem compromisso.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Os serviços têm garantia?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer__inner">
+              <p>Sim! Todo serviço realizado pela LRS Elétrica sai com garantia.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Vocês atendem aos fins de semana?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer__inner">
+              <p>Sim! Atendemos também aos sábados e domingos, mediante agendamento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="section" id="contato">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Fale com a gente</span>
+        <h2>Bora <span class="text-accent">conversar?</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <a href="https://wa.me/5533984217848?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20ou%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-card__icon contact-card__icon--whatsapp">
+            <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor"><path d="M16 .3C7.4.3.4 7.2.4 15.8c0 2.7.7 5.3 2.1 7.7L.3 31.7l8.4-2.2c2.3 1.3 4.9 1.9 7.6 1.9 8.6 0 15.6-6.9 15.6-15.5C31.9 7.2 24.9.3 16 .3zm0 28.4c-2.4 0-4.7-.6-6.8-1.9l-.5-.3-5 1.3 1.3-4.8-.3-.5c-1.4-2.2-2.1-4.7-2.1-7.3 0-7.1 5.8-12.9 13.4-12.9 3.6 0 6.9 1.4 9.5 3.9 2.5 2.5 4 5.9 4 9.4-.1 7.2-5.9 13.1-13.5 13.1zm7.3-9.7c-.4-.2-2.4-1.2-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.2-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.6.1-.3 0-.5 0-.7-.1-.2-.9-2.2-1.3-3-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.8 4.2 6.7 5.9.9.4 1.7.6 2.3.8.9.3 1.8.3 2.4.2.7-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.2-.3-.3-.7-.5z"/></svg>
+          </span>
+          <h3>WhatsApp</h3>
+          <p>(33) 98421-7848</p>
+          <span class="contact-card__cta">Enviar mensagem →</span>
+        </a>
+
+        <a href="https://instagram.com/lrseletrica" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-card__icon contact-card__icon--instagram">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.645-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+          </span>
+          <h3>Instagram</h3>
+          <p>@lrseletrica</p>
+          <span class="contact-card__cta">Seguir perfil →</span>
+        </a>
+
+        <div class="contact-card contact-card--info">
+          <span class="contact-card__icon contact-card__icon--area">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 6.8 11.2 7.4 11.7a1 1 0 0 0 1.2 0c.6-.5 7.4-6.3 7.4-11.7 0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+          </span>
+          <h3>Área de Atendimento</h3>
+          <p>Atendimento local e região, sob agendamento.</p>
+          <span class="contact-card__cta">Consulte disponibilidade</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="#inicio" class="brand brand--footer">
+      <img src="assets/logo.png" alt="LRS Elétrica" class="brand__logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <span class="brand__fallback">
+        <span class="brand__fallback-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"/></svg>
+        </span>
+        <span class="brand__name">LRS <strong>ELÉTRICA</strong></span>
+      </span>
+    </a>
+
+    <nav class="footer__nav">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="footer__social">
+      <a href="https://wa.me/5533984217848?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20ou%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+      <a href="https://instagram.com/lrseletrica" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; <span id="year"></span> LRS Elétrica. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ===== FLOATING BUTTONS ===== -->
+<a href="https://wa.me/5533984217848?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20ou%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="fab fab--whatsapp" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor"><path d="M16 .3C7.4.3.4 7.2.4 15.8c0 2.7.7 5.3 2.1 7.7L.3 31.7l8.4-2.2c2.3 1.3 4.9 1.9 7.6 1.9 8.6 0 15.6-6.9 15.6-15.5C31.9 7.2 24.9.3 16 .3zm0 28.4c-2.4 0-4.7-.6-6.8-1.9l-.5-.3-5 1.3 1.3-4.8-.3-.5c-1.4-2.2-2.1-4.7-2.1-7.3 0-7.1 5.8-12.9 13.4-12.9 3.6 0 6.9 1.4 9.5 3.9 2.5 2.5 4 5.9 4 9.4-.1 7.2-5.9 13.1-13.5 13.1zm7.3-9.7c-.4-.2-2.4-1.2-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.2-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.6.1-.3 0-.5 0-.7-.1-.2-.9-2.2-1.3-3-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.8 4.2 6.7 5.9.9.4 1.7.6 2.3.8.9.3 1.8.3 2.4.2.7-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.2-.3-.3-.7-.5z"/></svg>
+</a>
+
+<button class="fab fab--top" id="backToTop" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 6.5 5 13.5 6.4 15 12 9.3l5.6 5.7 1.4-1.5z"/></svg>
+</button>
+
+<script src="js/script.js?v=2"></script>
+</body>
+</html>
