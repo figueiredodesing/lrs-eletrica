@@ -91,15 +91,24 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 700; margin: 0 0 .5em; 
   height: var(--header-h);
   display: flex;
   align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+  transition: box-shadow .3s ease;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(6, 7, 15, .55);
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
-  border-bottom: 1px solid rgba(255, 255, 255, .08);
-  transition: background .3s ease, box-shadow .3s ease;
+  transition: background .3s ease;
 }
 .header.is-scrolled {
-  background: rgba(6, 7, 15, .85);
   box-shadow: 0 4px 24px rgba(0, 0, 0, .3);
+}
+.header.is-scrolled::before {
+  background: rgba(6, 7, 15, .85);
 }
 
 .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
