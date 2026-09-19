@@ -576,10 +576,10 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 700; margin: 0 0 .5em; 
   .slide__text p { font-size: .95rem; margin-bottom: 16px; }
   .slide__cta { justify-content: center; gap: 10px; }
   .slide__cta .btn { padding: 11px 20px; font-size: .88rem; }
-  .slide__mascot { order: -1; height: 26vh; max-height: 210px; }
-  .mascot__img { max-height: 24vh; }
+  .slide__mascot { order: -1; height: 32vh; max-height: 260px; align-items: center; }
+  .mascot__img { max-height: 30vh; }
   .slide__mascot.mascot--fallback { height: 0; max-height: 0; }
-  .carousel { min-height: 660px; }
+  .carousel { min-height: 710px; }
 }
 
 @media (max-width: 760px) {
