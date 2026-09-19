@@ -291,7 +291,8 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 700; margin: 0 0 .5em; 
   transform-style: preserve-3d;
 }
 .slide__mascot.is-bouncing .mascot__img { animation: mascotBounce .5s ease; }
-#mascot2 .mascot__img, #mascot3 .mascot__img { max-height: 60%; }
+#mascot2, #mascot3 { align-items: center; }
+#mascot2 .mascot__img, #mascot3 .mascot__img { max-height: 72%; }
 @keyframes mascotBounce {
   0% { transform: scale(1) translateY(0); }
   35% { transform: scale(1.05) translateY(-18px); }
