@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LRS Elétrica</title>
+<meta name="description" content="LRS Elétrica — fale no WhatsApp ou acesse nosso site.">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1440d6;
+    --blue-dark: #081b7a;
+    --blue-darker: #050f4d;
+    --yellow: #ffcf00;
+    --yellow-dark: #cc9a00;
+    --dark: #06070f;
+    --text-muted: rgba(255,255,255,.75);
+    --font-head: 'Rajdhani', 'Poppins', system-ui, sans-serif;
+    --font-body: 'Poppins', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    min-height: 100%;
+    background: radial-gradient(circle at 50% 0%, var(--blue-dark) 0%, var(--dark) 65%);
+    font-family: var(--font-body);
+    color: #fff;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 32px;
+  }
+  .card {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .brand img { height: 42px; width: auto; }
+  .brand span {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: .5px;
+  }
+  .brand strong { color: var(--yellow); }
+
+  .mascot {
+    width: min(72%, 300px);
+    margin: 0 auto 8px;
+    filter: drop-shadow(0 16px 30px rgba(0,0,0,.5));
+  }
+  .mascot img { width: 100%; height: auto; display: block; }
+
+  h1 {
+    font-family: var(--font-head);
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    margin: 4px 0 6px;
+  }
+  h1 span { color: var(--yellow); }
+
+  p.tagline {
+    color: var(--text-muted);
+    font-size: .95rem;
+    margin: 0 0 28px;
+    line-height: 1.5;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .link-btn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.02rem;
+    color: #fff;
+    background: rgba(255,255,255,.06);
+    border: 1.5px solid rgba(255,255,255,.14);
+    transition: transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .link-btn:hover { transform: translateY(-3px); }
+  .link-btn__icon {
+    width: 42px; height: 42px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .link-btn__text { text-align: left; }
+  .link-btn__text small {
+    display: block;
+    font-weight: 400;
+    font-size: .78rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .link-btn--whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c4a);
+    border-color: transparent;
+  }
+  .link-btn--whatsapp .link-btn__icon { background: rgba(255,255,255,.18); }
+
+  .link-btn--site {
+    background: var(--yellow);
+    color: var(--blue-darker);
+    border-color: transparent;
+  }
+  .link-btn--site .link-btn__icon { background: rgba(5,15,77,.12); color: var(--blue-darker); }
+  .link-btn--site .link-btn__text small { color: rgba(5,15,77,.65); }
+
+  .link-btn--instagram {
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    border-color: transparent;
+  }
+  .link-btn--instagram .link-btn__icon { background: rgba(255,255,255,.2); }
+
+  footer {
+    margin-top: 36px;
+    font-size: .78rem;
+    color: rgba(255,255,255,.4);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand">
+      <img src="assets/logo.png" alt="LRS Elétrica" onerror="this.style.display='none'">
+      <span>LRS <strong>ELÉTRICA</strong></span>
+    </div>
+
+    <div class="mascot">
+      <img src="assets/mascotebio.png" alt="Mascote LRS Elétrica">
+    </div>
+
+    <h1>Excelência que <span>dá energia</span></h1>
+    <p class="tagline">Instalação, manutenção e materiais elétricos com segurança e agilidade.</p>
+
+    <div class="links">
+      <a class="link-btn link-btn--whatsapp" href="https://wa.me/5533984217848?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20ou%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+        <span class="link-btn__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="24" height="24" fill="currentColor"><path d="M16 .3C7.4.3.4 7.2.4 15.8c0 2.7.7 5.3 2.1 7.7L.3 31.7l8.4-2.2c2.3 1.3 4.9 1.9 7.6 1.9 8.6 0 15.6-6.9 15.6-15.5C31.9 7.2 24.9.3 16 .3zm0 28.4c-2.4 0-4.7-.6-6.8-1.9l-.5-.3-5 1.3 1.3-4.8-.3-.5c-1.4-2.2-2.1-4.7-2.1-7.3 0-7.1 5.8-12.9 13.4-12.9 3.6 0 6.9 1.4 9.5 3.9 2.5 2.5 4 5.9 4 9.4-.1 7.2-5.9 13.1-13.5 13.1zm7.3-9.7c-.4-.2-2.4-1.2-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.2-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.6.1-.3 0-.5 0-.7-.1-.2-.9-2.2-1.3-3-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.8 4.2 6.7 5.9.9.4 1.7.6 2.3.8.9.3 1.8.3 2.4.2.7-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.2-.3-.3-.7-.5z"/></svg>
+        </span>
+        <span class="link-btn__text">
+          Chamar no WhatsApp
+          <small>(33) 98421-7848 · resposta rápida</small>
+        </span>
+      </a>
+
+      <a class="link-btn link-btn--site" href="https://figueiredodesing.github.io/lrs-eletrica/" target="_blank" rel="noopener">
+        <span class="link-btn__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"/></svg>
+        </span>
+        <span class="link-btn__text">
+          Acessar nosso site
+          <small>Serviços, galeria e orçamento</small>
+        </span>
+      </a>
+
+      <a class="link-btn link-btn--instagram" href="https://instagram.com/lrseletrica" target="_blank" rel="noopener">
+        <span class="link-btn__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.645-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+        </span>
+        <span class="link-btn__text">
+          Ver nosso Instagram
+          <small>@lrseletrica</small>
+        </span>
+      </a>
+    </div>
+
+    <footer>&copy; <span id="year"></span> LRS Elétrica</footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
