@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lrseletrica.com.br/sitemap.xml
